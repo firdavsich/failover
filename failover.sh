@@ -18,7 +18,7 @@ code=$?
 stat=`echo ${stat} | awk -F'---' '{print $3;}' | awk -Frtt '{print $1}'`
 
 {
-if [ $code -eq 0 ]
+if [ ${code} -eq 0 ]
 then
  echo `date +"%Y-%m-%d %H:%M"` "Success (${code}): $stat"
  route del default gw ${gw2}
