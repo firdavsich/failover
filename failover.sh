@@ -20,11 +20,11 @@ stat=`echo ${stat} | awk -F'---' '{print $3;}' | awk -Frtt '{print $1}'`
 {
 if [ $code -eq 0 ]
 then
- echo `date` "Success (${code}): $stat"
+ echo `date +"%Y-%m-%d %H:%M"` "Success (${code}): $stat"
  route del default gw ${gw2}
  route add default gw ${gw1}
 else
- echo `date` "Failure (${code}): $stat"
+ echo `date +"%Y-%m-%d %H:%M"` "Failure (${code}): $stat"
  route del default gw ${gw1}
  route add default gw ${gw2}
 fi
