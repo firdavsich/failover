@@ -1,5 +1,5 @@
 # failover
-2 uplnk failover
+2 uplink failover
 
 add job to /etc/crontab
 
